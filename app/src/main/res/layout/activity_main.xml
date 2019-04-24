@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_bright"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/BillAmount"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/BillAmountEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/ID_Percent"
+        android:layout_width="0dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:text="@string/label"
+        app:layout_constraintBaseline_toBaselineOf="@+id/PercentTextView"
+        app:layout_constraintEnd_toStartOf="@+id/PercentTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/PercentTextView"
+        android:layout_width="51dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="46dp"
+        android:layout_marginLeft="46dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginRight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/PercentUpButton"
+        app:layout_constraintEnd_toStartOf="@+id/PercentUpButton"
+        app:layout_constraintStart_toEndOf="@+id/Tip"
+        app:layout_constraintTop_toTopOf="@+id/PercentUpButton" />
+
+    <Button
+        android:id="@+id/PercentUpButton"
+        android:layout_width="54dp"
+        android:layout_height="41dp"
+        android:text="@string/PlusButtonText"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintBaseline_toBaselineOf="@+id/PercentDownBotton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/PercentDownBotton"
+        android:layout_width="55dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="26dp"
+        android:text="@string/MinusButtonText"
+        android:textColor="@android:color/holo_red_light"
+        app:layout_constraintBottom_toTopOf="@+id/Tip"
+        app:layout_constraintEnd_toEndOf="@+id/BillAmountEditText"
+        app:layout_constraintTop_toBottomOf="@+id/BillAmountEditText" />
+
+    <TextView
+        android:id="@+id/Tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="137dp"
+        android:text="@string/Tip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:text="@string/Total"
+        app:layout_constraintBaseline_toBaselineOf="@+id/TotalTextView"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/TipTextView"
+        android:layout_width="0dp"
+        android:layout_height="19dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_marginBottom="27dp"
+        app:layout_constraintBottom_toTopOf="@+id/TotalTextView"
+        app:layout_constraintEnd_toEndOf="@+id/TotalTextView"
+        app:layout_constraintStart_toStartOf="@+id/PercentTextView"
+        app:layout_constraintTop_toBottomOf="@+id/ID_Percent" />
+
+    <TextView
+        android:id="@+id/TotalTextView"
+        android:layout_width="70dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="81dp"
+        android:layout_marginLeft="81dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="81dp"
+        android:layout_marginRight="81dp"
+        app:layout_constraintEnd_toEndOf="@+id/PercentUpButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Tip" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
